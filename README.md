@@ -119,3 +119,8 @@ src/
 MIT. Úsalo, modifícalo y compártelo libremente.
 Los componentes de terceros (Whisper, transformers.js, FFmpeg, KaTeX, marked,
 highlight.js y las fuentes) mantienen sus propias licencias.
+
+
+## Contacto
+
+Contacta al creador de OpenTools a través del siguiente correo electrónico: **ceherrera@estudiantec.cr**
