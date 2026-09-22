@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Transcriber from './modules/transcriber/Transcriber.jsx';
 import Converter from './modules/converter/Converter.jsx';
 import MarkdownStudio from './modules/markdown/MarkdownStudio.jsx';
@@ -70,8 +71,8 @@ export default function App() {
     <div className="app">
       <nav className="sidebar" aria-label="Herramientas">
         <a className="brand" href="#transcriptor">
-          <span className="brand-mark" aria-hidden="true">E</span>
-          <span>Estudio Hub</span>
+          <span className="brand-mark" aria-hidden="true">OT</span>
+          <span>OpenTools</span>
         </a>
         <ul className="nav">
           {TOOLS.map((t) => (
@@ -92,6 +93,25 @@ export default function App() {
         </ul>
         <p className="privacy">
           Todo se procesa en tu equipo. Tus archivos nunca salen de tu navegador.
+        </p>
+        <p className="socials">
+          <a
+            href="https://github.com/AKAFabo"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <FaGithub />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/cesar-fabricio-herrera-rodriguez-41258b286/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin />
+          </a>
         </p>
       </nav>
 
