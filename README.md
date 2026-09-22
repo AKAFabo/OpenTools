@@ -17,8 +17,6 @@ límites de uso y tus archivos nunca salen de tu computadora.
 - Un navegador moderno (Chrome, Edge, Firefox o Safari recientes). Para transcribir
   rápido se recomienda Chrome o Edge, que soportan **WebGPU**.
 
-Ya **no** necesitas ffmpeg, cmake ni compiladores instalados: todo viene incluido.
-
 ## Instalación y uso
 
 ```bash
@@ -27,14 +25,6 @@ npm run dev
 ```
 
 Abre la dirección que aparece en la terminal (normalmente http://localhost:5173).
-
-Para generar una versión estática lista para publicar (por ejemplo en GitHub Pages,
-Netlify o Vercel):
-
-```bash
-npm run build     # genera la carpeta dist/
-npm run preview   # la sirve localmente para probarla
-```
 
 ## Cómo funciona cada módulo
 
