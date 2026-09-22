@@ -12,7 +12,7 @@ const MODELS = [
   { value: 'onnx-community/whisper-tiny', label: 'Tiny', hint: 'Muy rápido, precisión básica. Descarga pequeña.' },
   { value: 'onnx-community/whisper-base', label: 'Base', hint: 'Rápido y bueno para clases con audio claro.' },
   { value: 'onnx-community/whisper-small', label: 'Small', hint: 'Más preciso con ruido y acentos. Más lento.' },
-  { value: 'onnx-community/whisper-large-v3-turbo', label: 'Large v3 Turbo', hint: 'El más preciso. Descarga grande; ideal con GPU.' },
+  { value: 'onnx-community/whisper-large-v3-turbo', label: 'Large v3 Turbo', hint: 'El más preciso. Descarga grande; ideal con GPU. (Recomendado)' },
   { value: 'onnx-community/whisper-base.en', label: 'Base (solo inglés)', hint: 'Más rápido y preciso si todo el audio está en inglés.' },
   { value: 'custom', label: 'Otro de Hugging Face…', hint: 'Cualquier modelo Whisper en formato ONNX.' },
 ];
@@ -308,7 +308,7 @@ export default function Transcriber({ onSendToNotes }) {
                 ) : (
                   <button type="button" className="btn" onClick={cancel}>Detener</button>
                 )}
-                {busy && <span className="muted">Tiempo: {formatDuration(elapsed)}</span>}
+                {busy && <span className="muted">{formatDuration(elapsed)}</span>}
               </div>
 
               {status === 'decoding' && <Progress label="Preparando el audio…" />}

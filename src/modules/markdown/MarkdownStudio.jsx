@@ -182,7 +182,7 @@ export default function MarkdownStudio({ incoming }) {
     setSrc(await file.text());
   };
 
-  const words = (deferred.replace(/[#*_>`$|-]/g, ' ').match(/\S+/g) || []).length;
+  const words = (deferred.replace(/[#*_>`$|-]/g, ' ').match(/\S+/g) || []).length; //Utilizan el titulo del Markdown (#)
   const exportHtml = () => downloadText(buildHtml(title, html, style), `${slug(title)}.html`, 'text/html');
   const exportPdf = () => printHtml(buildHtml(title, html, style));
   const exportMd = () => downloadText(src, `${slug(title)}.md`, 'text/markdown');
