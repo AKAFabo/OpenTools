@@ -54,11 +54,14 @@ function buildHtml(title, bodyHtml, s) {
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@${katex.version}/dist/katex.min.css">
 <style>
 ${hljsCss}
-@page { size: ${page.css}; margin: ${s.margin}mm; }
+/* Margen de página 0: el navegador no tiene espacio para imprimir sus
+   encabezados/pies (título, fecha, hora, URL). El margen real va como
+   padding de .doc, repetido en cada página con box-decoration-break. */
+@page { size: ${page.css}; margin: 0; }
 html { background: #fff; }
 body { margin: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 .doc { max-width: ${page.width}; margin: 0 auto; padding: ${s.margin}mm; box-sizing: border-box; }
-@media print { .doc { max-width: none; padding: 0; } }
+@media print { .doc { max-width: none; -webkit-box-decoration-break: clone; box-decoration-break: clone; } }
 ${docCss(s, '.doc')}
 </style>
 </head>
