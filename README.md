@@ -1,4 +1,4 @@
-# Estudio Hub
+# OpenTools
 
 Herramientas gratuitas y open source para el día a día de un estudiante universitario.
 Todo corre **dentro de tu navegador**: no hay servidor, no hay APIs de pago, no hay
